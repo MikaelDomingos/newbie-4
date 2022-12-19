@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #19a1ae;
+  height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+  overflow: hidden;
+}
+
+body::after, body::before {
+  content: "";
+  height: 1000px;
+  width: 1000px;
+  max-width: 80%;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  transition: .3s;
+  overflow: hidden;
+}
+
+body::after {
+  background: url('../images/bg-pattern-top.svg');
+  background-position: left -200%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  left: 0px;
+  top: 0px;
+}
+
+body::before {
+  background: url('../images/bg-pattern-bottom.svg');
+  background-position: right 300%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  right: 0px;
+  bottom: 0px;
+}
+
+@media (max-width: 1080px) {
+  body::after, body::before {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 720px) {
+  body::after, body::before {
+    width: 600px;
+    height: 600px;
+    background-size: 100%;
+  }
+
+  body::after {
+    background-position: 0 -50%;
+  }
+
+  body::before {
+    background-position: 0 150%;
+  }
+}
+
+.photos-cardtop-victor {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px 15px 0px 0px;
+  position: relative;
+}
+.photo_card {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px 15px 0px 0px;
+}
+.photo_victor {
+  width: 100%;
+  max-width: 96px;
+  border-radius: 50px;
+  border: 5px white solid;
+  position: absolute;
+  bottom: -45.5px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.top {
+  background-color: white;
+  border-radius: 15px 15px;
+  margin: 0 20px;
+}
+
+.victor-name-year {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 60px;
+}
+.victor-name {
+  font-size: 18px;
+}
+.victor-year {
+  font-size: 18px;
+  color: #6b7082;
+}
+.country {
+  font-size: 14px;
+  color: #6b7082;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.border-bottom {
+  border-bottom: 0.1px solid #e8e9ec;
+}
+.final {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  line-height: 30px;
+  gap: 50px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.text-top {
+  font-size: 18px;
+}
+.text-bottom {
+  font-size: 10px;
+  color: #6b7082;
+}
